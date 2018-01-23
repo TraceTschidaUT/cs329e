@@ -37,13 +37,22 @@ func main() -> Void
     var carWinners = [String]()
     var maxSpeed: Int = 0;
     
-    for (carMake, speed) in carStats
+    // Find the fastest time
+    for (_, speed) in carStats
     {
-        if (speed >= maxSpeed)
+        if (speed > maxSpeed)
         {
             // Set the max speed and car winners
             maxSpeed = speed;
-            carWinners.append(carMake);
+        }
+    }
+    
+    // Get name(s) of the cars with the fastest times
+    for (carMake, speed) in carStats
+    {
+        if (speed == maxSpeed)
+        {
+            carWinners.append(carMake)
         }
     }
     
