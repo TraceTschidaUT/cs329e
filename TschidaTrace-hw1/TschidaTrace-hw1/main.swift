@@ -11,19 +11,19 @@ import Foundation
 func main() -> Void
 {
     // Create three car classes
-    let maserati: Automoblie = Automoblie.create("Maserati", model: "GranTurismo", numberOfDoors: 2, speed: 67);
+    let maserati: Automoblie = Automoblie.create(make: "Maserati", model: "GranTurismo", numberOfDoors: 2, speed: 67);
     
-    let honda: Automoblie = Automoblie.create("Honda", model: "Accord", numberOfDoors: 4, speed: 128);
+    let honda: Automoblie = Automoblie.create(make: "Honda", model: "Accord", numberOfDoors: 4, speed: 128);
     
-    let tesla: Automoblie = Automoblie.create("Tesla", model: "Model S 90", numberOfDoors: 2, speed: 35);
+    let tesla: Automoblie = Automoblie.create(make: "Tesla", model: "Model S 90", numberOfDoors: 2, speed: 35);
     
     // Loop through 10 times, adjust speed, and print description
     for _ in 0...9
     {
         // Increase the speed on each car
-        maserati.increaseSpeed(Int(randomValueBetween(0, max: 16)));
-        honda.increaseSpeed(Int(randomValueBetween(0, max: 16)));
-        tesla.increaseSpeed(Int(randomValueBetween(0, max: 16)));
+        maserati.increaseSpeed(speedChange: Int(randomValueBetween(min: 0, max: 16)));
+        honda.increaseSpeed(speedChange: Int(randomValueBetween(min: 0, max: 16)));
+        tesla.increaseSpeed(speedChange: Int(randomValueBetween(min: 0, max: 16)));
         
     }
     
