@@ -27,7 +27,7 @@ class Automoblie
     
     class func create (make: String, model: String, numberOfDoors: Int, speed: Int) -> Automoblie
     {
-        return Automoblie(make: <#T##String#>, model: <#T##String#>, numberOfDoors: <#T##Int#>, speed: <#T##Int#>);
+        return Automoblie(make: make, model: model, numberOfDoors: numberOfDoors, speed: speed);
     }
     
     var make: String
@@ -55,14 +55,26 @@ class Automoblie
     
     func increaseSpeed(speedChange: Int) -> Void
     {
-        // Determine if the speed change is between 0 and 150
-        if (self.speed + speedChange > 150 || self.speed + speedChange < 0)
+        // Determine if the speed after the change is between 0 and 150
+        if (self.speed + speedChange <= 150 && self.speed + speedChange >= 0)
         {
-            print("The new speed must be between 0 and 150 miles per hour")
+            // Set the new speed
+            self._speed += speedChange;
         }
-        
-        // Set the new speed
-        self._speed += speedChange;
-        
+    }
+    
+    func decreaseSpeed(speedChange: Int) -> Void
+    {
+        // Determine if the speed after the change is between 0 and 150
+        if (self.speed + speedChange <= 150 && self.speed + speedChange >= 0)
+        {
+            // Set the new speed
+            self._speed += speedChange;
+        }
+    }
+    
+    func description() -> String
+    {
+        return "Make: \(self.make), Model: \(self.model), NumDoors: \(self.numberOfDoors), Speed \(self.speed)"
     }
 }
