@@ -11,10 +11,10 @@ import Foundation
 class Automoblie
 {
     // Properties
-    private var _make: String = "";
-    private var _model: String = "";
-    private var _numberOfDoors: Int = 0;
-    private var _speed: Int = 0;
+    private var _make: String;
+    private var _model: String;
+    private var _numberOfDoors: Int;
+    private var _speed: Int;
     
     // Methods
     init (make: String, model: String, numberOfDoors: Int, speed: Int)
