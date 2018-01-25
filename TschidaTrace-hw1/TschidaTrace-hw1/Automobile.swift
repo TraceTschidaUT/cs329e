@@ -31,26 +31,47 @@ class Automoblie
     }
     
     var make: String
+    {
+        get
         {
-        get { return self._make; }
-        set { self._make = newValue; }
+            return self._make;
+        }
+        set
+        {
+            self._make = newValue;
+        }
     }
     
     var model: String
+    {
+        get
         {
-        get { return self._model; }
-        set { self._model = newValue; }
+            return self._model;
+        }
+        set
+        {
+            self._model = newValue;
+        }
     }
     
     var numberOfDoors: Int
+    {
+        get
         {
-        get { return self._numberOfDoors; }
-        set { self._numberOfDoors = newValue; }
+            return self._numberOfDoors;
+        }
+        set
+        {
+            self._numberOfDoors = newValue;
+        }
     }
     
     var speed: Int
+    {
+        get
         {
-        get { return self._speed; }
+            return self._speed;
+        }
     }
     
     func increaseSpeed(speedChange: Int) -> Void
@@ -69,7 +90,7 @@ class Automoblie
         if (self.speed + speedChange <= 150 && self.speed + speedChange >= 0)
         {
             // Set the new speed
-            self._speed += speedChange;
+            self._speed -= speedChange;
         }
     }
     
