@@ -74,7 +74,7 @@ class Automoblie
         }
     }
     
-    func increaseSpeed(speedChange: Int) -> Void
+    func increaseSpeed(speedChange: Int)
     {
         // Determine if the speed after the change is between 0 and 150
         if (self.speed + speedChange <= 150 && self.speed + speedChange >= 0)
@@ -84,7 +84,7 @@ class Automoblie
         }
     }
     
-    func decreaseSpeed(speedChange: Int) -> Void
+    func decreaseSpeed(speedChange: Int)
     {
         // Determine if the speed after the change is between 0 and 150
         if (self.speed + speedChange <= 150 && self.speed + speedChange >= 0)
