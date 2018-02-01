@@ -2,67 +2,89 @@
 //  ViewController.swift
 //  TschidaTrace-hw2
 //
-//  Created by Trace Tschida on 1/30/18.
+//  Created by Trace Tschida on 2/1/18.
 //  Copyright © 2018 cs329e. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-    
-    // MARK: Properties
+// UITextFieldDelegate = protocol for Textfields
+// Holds the contract between the Principal and the Delegate
+// Principal = nameTextField, contains a Delegate property of type UITextFieldDelegate
+// Delegate = The View Controller
+// The View Controller implements the protocol and there for is the Delegate to nameTextField
+// This is why you have to set nameTextField to self, because self implements UITextFieldDelegate
+class ViewController: UIViewController, UITextFieldDelegate
+{
+    // View Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var responseLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     
-    // MARK: UITextFieldDelegate
+    // Button Handler
+    @IBAction func btnSaveClicked(_ sender: Any)
+    {
+        guard let nameText: String = nameTextField.text else
+        {
+            messageLabel.text = "You must enter a value for *both* name and city!!"
+            return
+        }
+        guard let cityText: String = cityTextField.text else
+        {
+            messageLabel.text = "You must enter a value for *both* name and city!!"
+            return
+        }
+        
+        if nameText.trimmingCharacters(in: .whitespaces).isEmpty || cityText.trimmingCharacters(in: .whitespaces).isEmpty
+        {
+            messageLabel.text = "You must enter a value for *both* name and city!!"
+            return
+        }
+        
+        messageLabel.text = nameText + " - " + cityText
+    }
+    
+    // Closes the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        // Hide the keyboard
         textField.resignFirstResponder()
         return true
     }
     
-
-    @IBAction func textFieldDidEndEditing(_ textField: UITextField)
+    // Opens the keyboard
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     {
-        nameTextField.text = textField.text
+        return true
     }
     
-    // MARK: Actions
-    @IBAction func saveButton(_ sender: UIButton)
+    // Stops Editing
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
     {
-        let defaultLabel: String = "You must enter a value for *both* name and city!!"
-        
-        guard let nameText = nameTextField.text else
-        {
-            responseLabel.text = defaultLabel
-            return
-        }
-        
-        guard let cityText = cityTextField.text else
-        {
-            responseLabel.text = defaultLabel
-            return
-        }
-        
-        responseLabel.text = nameText + " " + cityText
+        return true
     }
     
+    // When user touches elsewhere, will close the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
+    }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib
+        // Do any additional setup after loading the view, typically from a nib.
         
-        // Handle the text field's user input through delegate callback
-        nameTextField.delegate = self
-        cityTextField.delegate = self
+        // Sets the delgeate of UITextField to the instance of this class
+        self.nameTextField.delegate = self
+        self.cityTextField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
 }
 

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TschidaTrace-hw2
 //
-//  Created by Trace Tschida on 1/30/18.
+//  Created by Trace Tschida on 2/1/18.
 //  Copyright © 2018 cs329e. All rights reserved.
 //
 

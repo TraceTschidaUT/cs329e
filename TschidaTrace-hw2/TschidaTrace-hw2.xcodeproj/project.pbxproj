@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8B9A7682021092700120383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9A7672021092700120383 /* AppDelegate.swift */; };
-		C8B9A76A2021092700120383 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9A7692021092700120383 /* ViewController.swift */; };
-		C8B9A76D2021092700120383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B9A76B2021092700120383 /* Main.storyboard */; };
-		C8B9A76F2021092700120383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B9A76E2021092700120383 /* Assets.xcassets */; };
-		C8B9A7722021092700120383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B9A7702021092700120383 /* LaunchScreen.storyboard */; };
+		C86FAB3020237CDA00CBD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86FAB2F20237CDA00CBD3AF /* AppDelegate.swift */; };
+		C86FAB3220237CDA00CBD3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86FAB3120237CDA00CBD3AF /* ViewController.swift */; };
+		C86FAB3520237CDA00CBD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86FAB3320237CDA00CBD3AF /* Main.storyboard */; };
+		C86FAB3720237CDA00CBD3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86FAB3620237CDA00CBD3AF /* Assets.xcassets */; };
+		C86FAB3A20237CDA00CBD3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86FAB3820237CDA00CBD3AF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C8B9A7642021092700120383 /* TschidaTrace-hw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TschidaTrace-hw2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8B9A7672021092700120383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8B9A7692021092700120383 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C8B9A76C2021092700120383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C8B9A76E2021092700120383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C8B9A7712021092700120383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C8B9A7732021092700120383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86FAB2C20237CDA00CBD3AF /* TschidaTrace-hw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TschidaTrace-hw2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86FAB2F20237CDA00CBD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C86FAB3120237CDA00CBD3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C86FAB3420237CDA00CBD3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C86FAB3620237CDA00CBD3AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C86FAB3920237CDA00CBD3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C86FAB3B20237CDA00CBD3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C8B9A7612021092700120383 /* Frameworks */ = {
+		C86FAB2920237CDA00CBD3AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,31 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C8B9A75B2021092700120383 = {
+		C86FAB2320237CDA00CBD3AF = {
 			isa = PBXGroup;
 			children = (
-				C8B9A7662021092700120383 /* TschidaTrace-hw2 */,
-				C8B9A7652021092700120383 /* Products */,
+				C86FAB2E20237CDA00CBD3AF /* TschidaTrace-hw2 */,
+				C86FAB2D20237CDA00CBD3AF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C8B9A7652021092700120383 /* Products */ = {
+		C86FAB2D20237CDA00CBD3AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8B9A7642021092700120383 /* TschidaTrace-hw2.app */,
+				C86FAB2C20237CDA00CBD3AF /* TschidaTrace-hw2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C8B9A7662021092700120383 /* TschidaTrace-hw2 */ = {
+		C86FAB2E20237CDA00CBD3AF /* TschidaTrace-hw2 */ = {
 			isa = PBXGroup;
 			children = (
-				C8B9A7672021092700120383 /* AppDelegate.swift */,
-				C8B9A7692021092700120383 /* ViewController.swift */,
-				C8B9A76B2021092700120383 /* Main.storyboard */,
-				C8B9A76E2021092700120383 /* Assets.xcassets */,
-				C8B9A7702021092700120383 /* LaunchScreen.storyboard */,
-				C8B9A7732021092700120383 /* Info.plist */,
+				C86FAB2F20237CDA00CBD3AF /* AppDelegate.swift */,
+				C86FAB3120237CDA00CBD3AF /* ViewController.swift */,
+				C86FAB3320237CDA00CBD3AF /* Main.storyboard */,
+				C86FAB3620237CDA00CBD3AF /* Assets.xcassets */,
+				C86FAB3820237CDA00CBD3AF /* LaunchScreen.storyboard */,
+				C86FAB3B20237CDA00CBD3AF /* Info.plist */,
 			);
 			path = "TschidaTrace-hw2";
 			sourceTree = "<group>";
@@ -67,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C8B9A7632021092700120383 /* TschidaTrace-hw2 */ = {
+		C86FAB2B20237CDA00CBD3AF /* TschidaTrace-hw2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8B9A7762021092700120383 /* Build configuration list for PBXNativeTarget "TschidaTrace-hw2" */;
+			buildConfigurationList = C86FAB3E20237CDA00CBD3AF /* Build configuration list for PBXNativeTarget "TschidaTrace-hw2" */;
 			buildPhases = (
-				C8B9A7602021092700120383 /* Sources */,
-				C8B9A7612021092700120383 /* Frameworks */,
-				C8B9A7622021092700120383 /* Resources */,
+				C86FAB2820237CDA00CBD3AF /* Sources */,
+				C86FAB2920237CDA00CBD3AF /* Frameworks */,
+				C86FAB2A20237CDA00CBD3AF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,26 +81,26 @@
 			);
 			name = "TschidaTrace-hw2";
 			productName = "TschidaTrace-hw2";
-			productReference = C8B9A7642021092700120383 /* TschidaTrace-hw2.app */;
+			productReference = C86FAB2C20237CDA00CBD3AF /* TschidaTrace-hw2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C8B9A75C2021092700120383 /* Project object */ = {
+		C86FAB2420237CDA00CBD3AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = cs329e;
 				TargetAttributes = {
-					C8B9A7632021092700120383 = {
+					C86FAB2B20237CDA00CBD3AF = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C8B9A75F2021092700120383 /* Build configuration list for PBXProject "TschidaTrace-hw2" */;
+			buildConfigurationList = C86FAB2720237CDA00CBD3AF /* Build configuration list for PBXProject "TschidaTrace-hw2" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,54 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = C8B9A75B2021092700120383;
-			productRefGroup = C8B9A7652021092700120383 /* Products */;
+			mainGroup = C86FAB2320237CDA00CBD3AF;
+			productRefGroup = C86FAB2D20237CDA00CBD3AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C8B9A7632021092700120383 /* TschidaTrace-hw2 */,
+				C86FAB2B20237CDA00CBD3AF /* TschidaTrace-hw2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C8B9A7622021092700120383 /* Resources */ = {
+		C86FAB2A20237CDA00CBD3AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8B9A7722021092700120383 /* LaunchScreen.storyboard in Resources */,
-				C8B9A76F2021092700120383 /* Assets.xcassets in Resources */,
-				C8B9A76D2021092700120383 /* Main.storyboard in Resources */,
+				C86FAB3A20237CDA00CBD3AF /* LaunchScreen.storyboard in Resources */,
+				C86FAB3720237CDA00CBD3AF /* Assets.xcassets in Resources */,
+				C86FAB3520237CDA00CBD3AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C8B9A7602021092700120383 /* Sources */ = {
+		C86FAB2820237CDA00CBD3AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8B9A76A2021092700120383 /* ViewController.swift in Sources */,
-				C8B9A7682021092700120383 /* AppDelegate.swift in Sources */,
+				C86FAB3220237CDA00CBD3AF /* ViewController.swift in Sources */,
+				C86FAB3020237CDA00CBD3AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C8B9A76B2021092700120383 /* Main.storyboard */ = {
+		C86FAB3320237CDA00CBD3AF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C8B9A76C2021092700120383 /* Base */,
+				C86FAB3420237CDA00CBD3AF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C8B9A7702021092700120383 /* LaunchScreen.storyboard */ = {
+		C86FAB3820237CDA00CBD3AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C8B9A7712021092700120383 /* Base */,
+				C86FAB3920237CDA00CBD3AF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C8B9A7742021092700120383 /* Debug */ = {
+		C86FAB3C20237CDA00CBD3AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		C8B9A7752021092700120383 /* Release */ = {
+		C86FAB3D20237CDA00CBD3AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +270,7 @@
 			};
 			name = Release;
 		};
-		C8B9A7772021092700120383 /* Debug */ = {
+		C86FAB3F20237CDA00CBD3AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -284,7 +284,7 @@
 			};
 			name = Debug;
 		};
-		C8B9A7782021092700120383 /* Release */ = {
+		C86FAB4020237CDA00CBD3AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,25 +301,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C8B9A75F2021092700120383 /* Build configuration list for PBXProject "TschidaTrace-hw2" */ = {
+		C86FAB2720237CDA00CBD3AF /* Build configuration list for PBXProject "TschidaTrace-hw2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8B9A7742021092700120383 /* Debug */,
-				C8B9A7752021092700120383 /* Release */,
+				C86FAB3C20237CDA00CBD3AF /* Debug */,
+				C86FAB3D20237CDA00CBD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8B9A7762021092700120383 /* Build configuration list for PBXNativeTarget "TschidaTrace-hw2" */ = {
+		C86FAB3E20237CDA00CBD3AF /* Build configuration list for PBXNativeTarget "TschidaTrace-hw2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8B9A7772021092700120383 /* Debug */,
-				C8B9A7782021092700120383 /* Release */,
+				C86FAB3F20237CDA00CBD3AF /* Debug */,
+				C86FAB4020237CDA00CBD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C8B9A75C2021092700120383 /* Project object */;
+	rootObject = C86FAB2420237CDA00CBD3AF /* Project object */;
 }
