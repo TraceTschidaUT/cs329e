@@ -60,7 +60,7 @@ class PeopleTableViewController: UITableViewController {
         return people.count
     }
 
-    
+    // Gets called
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Change the Identifier
@@ -68,8 +68,8 @@ class PeopleTableViewController: UITableViewController {
 
         // Configure the cell...
         let person = people[indexPath.row]
-        cell.detailTextLabel?.text = person.firstName
-        cell.textLabel?.text = person.lastName
+        cell.detailTextLabel?.text = person.lastName
+        cell.textLabel?.text = person.firstName
 
         return cell
     }
@@ -116,8 +116,9 @@ class PeopleTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         super.prepare(for: segue, sender: sender)
-            
-        if let indexPath = tableView.indexPathForSelectedRow
+        
+        // Get the index Path to select the correct person object
+        if let indexPath = self.tableView.indexPathForSelectedRow
         {
             // Get the Selected Row from the Table View
             let selectedRow = indexPath.row
