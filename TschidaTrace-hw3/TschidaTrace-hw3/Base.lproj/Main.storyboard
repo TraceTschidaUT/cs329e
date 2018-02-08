@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="-106" y="252"/>
         </scene>
-        <!--Person-->
+        <!--Person View Controller-->
         <scene sceneID="iqq-jF-f1k">
             <objects>
-                <viewController id="LY6-sN-TEz" customClass="PersonViewController" customModule="TschidaTrace_hw3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Person View Controller" id="LY6-sN-TEz" customClass="PersonViewController" customModule="TschidaTrace_hw3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTS-BI-1KU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
