@@ -9,7 +9,27 @@
 import UIKit
 
 class PeopleTableViewController: UITableViewController {
-
+    
+    // Properties
+    private var people: [Person] = []
+    
+    // Methods
+    private func createDataModel()
+    {
+        let firstNames: [String] = ["Bob", "John", "Led", "Sam", "June", "Allison", "Donald", "Hilary", "Barrack", "Teddy"]
+        let lastNames: [String] = ["Carpenter", "Jones", "Zeppelin", "Smith", "Johnson", "Atwater", "Trump", "Clinton", "Obama", "Roosevelt"]
+        let ages: [Int] = [35, 8, 73, 34, 12, 21, 56, 69, 53, 70]
+        let cities: [String] = ["Austin", "Boston", "Paris", "Sydney", "Vienna", "Venice", "Munich", "Brussels", "Tokyo", "Shanghai"]
+        
+        for count in 0...9
+        {
+            // Create a person
+            let person: Person = Person(firstName: firstNames[count], lastName: lastNames[count], age: ages[count], city: cities[count])
+            
+            // Add the person to the Person Array
+            people.append(person)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +38,9 @@ class PeopleTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Load the People Data Model
+        createDataModel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +51,28 @@ class PeopleTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        // Number of rows = number of people in data model
+        return people.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        // Change the Identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: "person_identifier", for: indexPath)
 
         // Configure the cell...
+        let person = people[indexPath.row]
+        cell.detailTextLabel?.text = person.firstName
+        cell.textLabel?.text = person.lastName
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +109,25 @@ class PeopleTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+            
+        if let indexPath = tableView.indexPathForSelectedRow
+        {
+            // Get the Selected Row from the Table View
+            let selectedRow = indexPath.row
+            
+            // Grab the next View
+            let personViewController = segue.destination as? PersonViewController
+            
+            // Pass the Person Object to the next view
+            personViewController?.person = self.people[selectedRow]
+        }
     }
-    */
 
 }

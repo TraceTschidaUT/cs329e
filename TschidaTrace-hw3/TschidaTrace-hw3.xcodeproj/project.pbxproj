@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83EAC2E202CA75600E99E9C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EAC2D202CA75600E99E9C /* Person.swift */; };
 		C85B97C7202A5869003D96FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B97C6202A5869003D96FA /* AppDelegate.swift */; };
 		C85B97CC202A5869003D96FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85B97CA202A5869003D96FA /* Main.storyboard */; };
 		C85B97CE202A5869003D96FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85B97CD202A5869003D96FA /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C83EAC2D202CA75600E99E9C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C85B97C3202A5869003D96FA /* TschidaTrace-hw3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TschidaTrace-hw3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85B97C6202A5869003D96FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C85B97CB202A5869003D96FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				C85B97C6202A5869003D96FA /* AppDelegate.swift */,
+				C85B97DA202A592A003D96FA /* PeopleTableViewController.swift */,
+				C85B97DC202A5993003D96FA /* PersonViewController.swift */,
 				C85B97CA202A5869003D96FA /* Main.storyboard */,
 				C85B97CD202A5869003D96FA /* Assets.xcassets */,
 				C85B97CF202A5869003D96FA /* LaunchScreen.storyboard */,
 				C85B97D2202A5869003D96FA /* Info.plist */,
-				C85B97DA202A592A003D96FA /* PeopleTableViewController.swift */,
-				C85B97DC202A5993003D96FA /* PersonViewController.swift */,
+				C83EAC2D202CA75600E99E9C /* Person.swift */,
 			);
 			path = "TschidaTrace-hw3";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				C85B97DB202A592A003D96FA /* PeopleTableViewController.swift in Sources */,
 				C85B97DD202A5993003D96FA /* PersonViewController.swift in Sources */,
+				C83EAC2E202CA75600E99E9C /* Person.swift in Sources */,
 				C85B97C7202A5869003D96FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
