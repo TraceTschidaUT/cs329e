@@ -38,6 +38,7 @@ class PersonViewController: UIViewController {
         lastNameLabel.text = person?.lastName
         ageLabel.text = age
         cityLabel.text = person?.city
+        
     }
 
     override func didReceiveMemoryWarning()
