@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PersonViewController: UIViewController {
+class PersonViewController: UIViewController 
+{
     
     // Properties
     var person: Person?
