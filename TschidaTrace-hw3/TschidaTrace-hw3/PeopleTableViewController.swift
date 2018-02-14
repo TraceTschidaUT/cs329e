@@ -16,7 +16,7 @@ class PeopleTableViewController: UITableViewController
     // Methods
     private func createDataModel()
     {
-        let firstNames: [String] = ["Bob", "John", "Led", "Sam", "June", "Allison", "Donald", "Hilary", "Barrack", "Teddy"]
+        let firstNames: [String] = ["Bob", "John", "Led", "Sam", "June", "Allison", "Donald", "Hillary", "Barrack", "Teddy"]
         let lastNames: [String] = ["Carpenter", "Jones", "Zeppelin", "Smith", "Johnson", "Atwater", "Trump", "Clinton", "Obama", "Roosevelt"]
         let ages: [Int] = [35, 8, 73, 34, 12, 21, 56, 69, 53, 70]
         let cities: [String] = ["Austin", "Boston", "Paris", "Sydney", "Vienna", "Venice", "Munich", "Brussels", "Tokyo", "Shanghai"]

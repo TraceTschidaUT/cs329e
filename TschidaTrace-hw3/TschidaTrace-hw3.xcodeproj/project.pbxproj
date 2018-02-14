@@ -61,11 +61,11 @@
 				C85B97C6202A5869003D96FA /* AppDelegate.swift */,
 				C85B97DA202A592A003D96FA /* PeopleTableViewController.swift */,
 				C85B97DC202A5993003D96FA /* PersonViewController.swift */,
+				C83EAC2D202CA75600E99E9C /* Person.swift */,
 				C85B97CA202A5869003D96FA /* Main.storyboard */,
 				C85B97CD202A5869003D96FA /* Assets.xcassets */,
 				C85B97CF202A5869003D96FA /* LaunchScreen.storyboard */,
 				C85B97D2202A5869003D96FA /* Info.plist */,
-				C83EAC2D202CA75600E99E9C /* Person.swift */,
 			);
 			path = "TschidaTrace-hw3";
 			sourceTree = "<group>";
