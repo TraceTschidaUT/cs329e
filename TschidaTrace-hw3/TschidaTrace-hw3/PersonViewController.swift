@@ -10,7 +10,6 @@ import UIKit
 
 class PersonViewController: UIViewController 
 {
-    
     // Properties
     var person: Person?
 
