@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PeopleTableViewController: UITableViewController {
-    
+class PeopleTableViewController: UITableViewController 
+{
     // Properties
     private var people: [Person] = []
     
@@ -30,7 +30,8 @@ class PeopleTableViewController: UITableViewController {
             people.append(person)
         }
     }
-    override func viewDidLoad() {
+    override func viewDidLoad() 
+    {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -43,26 +44,28 @@ class PeopleTableViewController: UITableViewController {
         createDataModel()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() 
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int 
+    {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int 
+    {
         // Number of rows = number of people in data model
         return people.count
     }
 
     // Gets called
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell 
+    {
         // Change the Identifier
         let cell = tableView.dequeueReusableCell(withIdentifier: "person_identifier", for: indexPath)
 
