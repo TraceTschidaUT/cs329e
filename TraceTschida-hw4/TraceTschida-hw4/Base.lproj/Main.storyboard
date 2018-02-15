@@ -49,7 +49,7 @@
                                             <rect key="frame" x="107" y="20" width="161" height="30"/>
                                             <state key="normal" title="Show Full Name Details"/>
                                             <connections>
-                                                <action selector="showFullNameDetailsButton:" destination="pCs-b8-jzV" eventType="touchUpInside" id="jq0-ty-fk5"/>
+                                                <action selector="showFullNameDetailsButton:" destination="86f-Pz-rXb" eventType="touchUpInside" id="bTS-OI-Vx0"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;last name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnS-oX-Kqs">

@@ -8,46 +8,14 @@
 
 import UIKit
 
-class ContactTableViewController: UITableViewController
+class ContactTableViewController: UITableViewController, PersonAlert
 {
     // Properties
     var alertController:UIAlertController? = nil
     private var people: [Person] = []
     
+    // Lables
     @IBOutlet var contactTableView: UITableView!
-    @IBAction func showFullNameDetailsButton(_ sender: UIButton)
-    {
-        // Get the button information through where the button was touched
-        let buttonPosition: CGPoint = sender.convert(CGPoint.zero, to: self.tableView)
-        guard let indexPath: Int = self.tableView.indexPathForRow(at: buttonPosition)?.row else
-        {
-            return
-        }
-        
-        // Can also get the row's index by using the button.tag
-        // Button.tag would need to be set during the row creation below
-        // let row: Int = sender.tag
-        
-        // Get the person
-        let row: Int = Int(floor(Double(indexPath / 2)))
-        let person: Person = people[row]
-        
-        // Set the Alert Controller
-        self.alertController = UIAlertController(title: "Person", message: "\(person.firstName) \(person.lastName) \(person.age)", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // Add an Ok action
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-        
-        self.alertController!.addAction(OKAction)
-        
-        self.present(self.alertController!, animated: true, completion:nil)
-    }
-    
-    // Not called when alert is dismissed.
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-    }
     
     // Methods
     private func createDataModel()
@@ -69,6 +37,22 @@ class ContactTableViewController: UITableViewController
             people.append(person)
         }
     }
+    
+    // Delegate function
+    func buttonPersonAlert(_ rowIndex: Int)
+    {
+        let person: Person = people[rowIndex]
+
+        // Set the Alert Controller
+        self.alertController = UIAlertController(title: "Person", message: "\(person.firstName) \(person.lastName) \(person.age)", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // Add an Ok action
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        
+        self.alertController!.addAction(OKAction)
+        
+        self.present(self.alertController!, animated: true, completion:nil)
+    }
 
     override func viewDidLoad()
     {
@@ -88,6 +72,12 @@ class ContactTableViewController: UITableViewController
         
         // Set the navigation title
         self.navigationItem.title = "People List"
+    }
+    
+    // Not called when alert is dismissed.
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning()
@@ -128,6 +118,9 @@ class ContactTableViewController: UITableViewController
             cell.lastNameLabel.text = person.lastName
             cell.tag = index
             
+            // Associate the cells with this controller
+            cell.delegate = self
+            
             return cell
             
         }
@@ -165,7 +158,8 @@ class ContactTableViewController: UITableViewController
 
     /*
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+     
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -173,7 +167,8 @@ class ContactTableViewController: UITableViewController
 
     /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+     {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -185,14 +180,16 @@ class ContactTableViewController: UITableViewController
 
     /*
     // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath)
+     {
 
     }
     */
 
     /*
     // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+     {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
@@ -202,7 +199,8 @@ class ContactTableViewController: UITableViewController
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+     {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
