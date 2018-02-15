@@ -25,7 +25,7 @@ class NameTableViewCell: UITableViewCell
     @IBAction func showFullNameDetailsButton(_ sender: UIButton)
     {
         // Get the row from the index path of the button's parent view, the cell
-        let row: Int = Int(floor(Double(sender.tag / 2)))
+        let row: Int = self.tag
     
         // Call the alert function on the ContactTableViewController
         delegate?.buttonPersonAlert(row)

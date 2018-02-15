@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactTableViewController: UITableViewController, PersonAlert
+class ContactTableViewController: UITableViewController, PersonAlertDelegate
 {
     // Properties
     var alertController:UIAlertController? = nil
