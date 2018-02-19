@@ -13,6 +13,7 @@
 		4A9C9770203A516000084E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C976F203A516000084E25 /* Assets.xcassets */; };
 		4A9C9773203A516000084E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C9771203A516000084E25 /* LaunchScreen.storyboard */; };
 		4A9C977B203A522200084E25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C977A203A522200084E25 /* HomeViewController.swift */; };
+		4ACEC8B6203B57F200C21182 /* DbContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEC8B5203B57F200C21182 /* DbContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4A9C9772203A516000084E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A9C9774203A516000084E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A9C977A203A522200084E25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4ACEC8B5203B57F200C21182 /* DbContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DbContext.swift; path = Assets.xcassets/DbContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4A9C9771203A516000084E25 /* LaunchScreen.storyboard */,
 				4A9C9774203A516000084E25 /* Info.plist */,
 				4A9C976C203A516000084E25 /* TschidaTrace_hw5.xcdatamodeld */,
+				4ACEC8B5203B57F200C21182 /* DbContext.swift */,
 			);
 			path = "TschidaTrace-hw5";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9C9766203A516000084E25 /* AppDelegate.swift in Sources */,
+				4ACEC8B6203B57F200C21182 /* DbContext.swift in Sources */,
 				4A9C976E203A516000084E25 /* TschidaTrace_hw5.xcdatamodeld in Sources */,
 				4A9C977B203A522200084E25 /* HomeViewController.swift in Sources */,
 			);
