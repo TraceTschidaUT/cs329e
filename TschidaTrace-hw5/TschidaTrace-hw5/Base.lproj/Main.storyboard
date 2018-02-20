@@ -255,6 +255,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zh6-Bs-p69"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="yu8-1j-wfH" id="8pG-mg-TMd"/>
+                        <outlet property="lastNameLabel" destination="yyQ-T1-Mi1" id="eyU-yu-IV0"/>
+                        <outlet property="politicalPartyLabel" destination="JVX-iF-1jo" id="9Ve-eF-JI0"/>
+                        <outlet property="stateLabel" destination="Lld-Cu-jyw" id="7ey-mH-m9H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KyN-1v-avv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

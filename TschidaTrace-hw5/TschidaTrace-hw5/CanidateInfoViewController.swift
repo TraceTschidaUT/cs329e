@@ -9,11 +9,19 @@
 import UIKit
 
 class CanidateInfoViewController: UIViewController {
-
+    
+    // Properties
+    var person: Person?
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var politicalPartyLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Make the Labels from the segued personset in the pervious controller
+        
     }
 
     override func didReceiveMemoryWarning() {

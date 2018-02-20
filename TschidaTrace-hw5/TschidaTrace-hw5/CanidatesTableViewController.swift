@@ -99,14 +99,30 @@ class CanidatesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        // Get the index Path to select the correct person object
+        if let indexPath = self.tableView.indexPathForSelectedRow
+        {
+            // Get the Selected Row from the Table View
+            let selectedRow = indexPath.row
+            
+            // Grab the next View
+            let canidateInfoiewController = segue.destination as? CanidateInfoViewController
+            
+            // Pass the Canidate Object to the next view
+            // Need to downcast the person object to Type people from NSManagedObject
+            canidateInfoiewController?.person = self.people[selectedRow] as? Person
+        }
+        
     }
-    */
+    
 
 }
