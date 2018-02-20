@@ -20,8 +20,14 @@ class CanidateInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Make the Labels from the segued personset in the pervious controller
+        // Make the Labels from the segued person set in the pervious controller
+        firstNameLabel.text = person?.firstName
+        lastNameLabel.text = person?.lastName
+        stateLabel.text = person?.state
+        politicalPartyLabel.text = person?.politicalParty
         
+        // Set the Navigation Bar Label
+        self.navigationItem.title = "Canidate Detail"
     }
 
     override func didReceiveMemoryWarning() {

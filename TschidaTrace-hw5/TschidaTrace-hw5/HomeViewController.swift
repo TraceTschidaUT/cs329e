@@ -14,7 +14,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // Create a DbContext Instance
+        // Set the Navigation Title
+        self.navigationItem.title = "Canidate Manager"
     }
 
     override func didReceiveMemoryWarning() {

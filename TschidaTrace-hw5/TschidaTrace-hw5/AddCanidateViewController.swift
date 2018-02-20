@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCanidateViewController: UIViewController {
+class AddCanidateViewController: UIViewController, UITextFieldDelegate {
     
     // Properties
     @IBOutlet weak var firstNameLabel: UITextField!
@@ -47,12 +47,37 @@ class AddCanidateViewController: UIViewController {
         savedLabel.text = "Saved!"
         
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
+        // Connect the Delegates
+        self.firstNameLabel.delegate = self
+        self.lastNameLabel.delegate = self
+        self.stateLabel.delegate = self
+        
+        // Set the Title
+        self.navigationItem.title = "Add Canidate"
+    }
+    
+    // Control the Keyboards Operations
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {
