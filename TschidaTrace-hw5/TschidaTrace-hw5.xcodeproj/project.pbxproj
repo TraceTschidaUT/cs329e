@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3AB9BA203B904800673916 /* AddCanidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AB9B9203B904800673916 /* AddCanidateViewController.swift */; };
+		4A3AB9BC203B9A1600673916 /* CanidatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AB9BB203B9A1600673916 /* CanidatesTableViewController.swift */; };
+		4A3AB9BE203B9AC900673916 /* CanidateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AB9BD203B9AC900673916 /* CanidateInfoViewController.swift */; };
 		4A9C9766203A516000084E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C9765203A516000084E25 /* AppDelegate.swift */; };
 		4A9C976B203A516000084E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C9769203A516000084E25 /* Main.storyboard */; };
 		4A9C976E203A516000084E25 /* TschidaTrace_hw5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A9C976C203A516000084E25 /* TschidaTrace_hw5.xcdatamodeld */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A3AB9B9203B904800673916 /* AddCanidateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCanidateViewController.swift; sourceTree = "<group>"; };
+		4A3AB9BB203B9A1600673916 /* CanidatesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanidatesTableViewController.swift; sourceTree = "<group>"; };
+		4A3AB9BD203B9AC900673916 /* CanidateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanidateInfoViewController.swift; sourceTree = "<group>"; };
 		4A9C9762203A516000084E25 /* TschidaTrace-hw5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TschidaTrace-hw5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9C9765203A516000084E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A9C976A203A516000084E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 			children = (
 				4A9C9765203A516000084E25 /* AppDelegate.swift */,
 				4A9C977A203A522200084E25 /* HomeViewController.swift */,
+				4A3AB9B9203B904800673916 /* AddCanidateViewController.swift */,
+				4A3AB9BD203B9AC900673916 /* CanidateInfoViewController.swift */,
+				4A3AB9BB203B9A1600673916 /* CanidatesTableViewController.swift */,
 				4A9C9769203A516000084E25 /* Main.storyboard */,
 				4A9C976F203A516000084E25 /* Assets.xcassets */,
 				4A9C9771203A516000084E25 /* LaunchScreen.storyboard */,
@@ -142,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3AB9BE203B9AC900673916 /* CanidateInfoViewController.swift in Sources */,
 				4A9C9766203A516000084E25 /* AppDelegate.swift in Sources */,
 				4ACEC8B6203B57F200C21182 /* DbContext.swift in Sources */,
 				4A9C976E203A516000084E25 /* TschidaTrace_hw5.xcdatamodeld in Sources */,
+				4A3AB9BA203B904800673916 /* AddCanidateViewController.swift in Sources */,
+				4A3AB9BC203B9A1600673916 /* CanidatesTableViewController.swift in Sources */,
 				4A9C977B203A522200084E25 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

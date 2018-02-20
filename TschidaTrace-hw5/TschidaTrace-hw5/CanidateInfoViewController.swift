@@ -1,20 +1,19 @@
 //
-//  HomeViewController.swift
+//  CanidateInfoViewController.swift
 //  TschidaTrace-hw5
 //
-//  Created by user135456 on 2/18/18.
+//  Created by user135456 on 2/19/18.
 //  Copyright © 2018 tracetschida_cs329. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
+class CanidateInfoViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // Create a DbContext Instance
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,28 +22,14 @@ class HomeViewController: UIViewController {
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        super.prepare(for: segue, sender: sender)
-        
-        let button = sender as? UIButton
-        
-        // determine the button that is being called
-        // The Add Canidate Button
-        if button?.tag == 0 {
-            
-            
-        }
-            // The Show Canidates Button
-        else {
-            
-        }
     }
-    
+    */
 
 }
