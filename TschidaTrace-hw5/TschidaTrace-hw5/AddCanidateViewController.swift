@@ -16,6 +16,7 @@ class AddCanidateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stateLabel: UITextField!
     @IBOutlet weak var savedLabel: UILabel!
     @IBOutlet weak var policalPartySegmentedControl: UISegmentedControl!
+    var alertController: UIAlertController? = nil
     
     
     // Actions
@@ -40,12 +41,29 @@ class AddCanidateViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        // Add a person to the database
-        Db.savePerson(firstName: firstName, lastName: lastName, state: state, politicalParty: politicalParty)
-        
-        // Change the saved Label
-        savedLabel.text = "Candidate Saved!"
-        
+        // Check if any of the values are blank
+        if firstName.trimmingCharacters(in: .whitespaces).isEmpty || lastName.trimmingCharacters(in: .whitespaces).isEmpty || state.trimmingCharacters(in: .whitespaces).isEmpty {
+            
+            // Create an Alert
+            // Set the Alert Controller
+            self.alertController = UIAlertController(title: "Values Empty", message: "You must enter a value for all fields.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // Add an Ok action
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+            
+            self.alertController!.addAction(OKAction)
+            
+            self.present(self.alertController!, animated: true, completion:nil)
+            
+        }
+        else {
+            
+            // Add a person to the database
+            Db.savePerson(firstName: firstName, lastName: lastName, state: state, politicalParty: politicalParty)
+            
+            // Change the saved Label
+            savedLabel.text = "Candidate Saved!"
+        }
     }
 
     override func viewDidLoad() {
