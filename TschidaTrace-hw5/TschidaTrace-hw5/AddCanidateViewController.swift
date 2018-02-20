@@ -44,7 +44,7 @@ class AddCanidateViewController: UIViewController, UITextFieldDelegate {
         Db.savePerson(firstName: firstName, lastName: lastName, state: state, politicalParty: politicalParty)
         
         // Change the saved Label
-        savedLabel.text = "Saved!"
+        savedLabel.text = "Candidate Saved!"
         
     }
 
@@ -52,13 +52,16 @@ class AddCanidateViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view
-        // Connect the Delegates
+        // Connect the Delegates for textfields
         self.firstNameLabel.delegate = self
         self.lastNameLabel.delegate = self
         self.stateLabel.delegate = self
         
         // Set the Title
-        self.navigationItem.title = "Add Canidate"
+        self.navigationItem.title = "Add Candidate"
+        
+        // Clear the Saved! Text
+        self.savedLabel.text = ""
     }
     
     // Control the Keyboards Operations

@@ -18,7 +18,7 @@ class CanidatesTableViewController: UITableViewController {
         super.viewDidLoad()
 
        // Set the Navigation Information
-        self.navigationItem.title = "Show Canidates"
+        self.navigationItem.title = "Show Candidates"
         
         // Load the data
         people = Db.people
@@ -82,6 +82,11 @@ class CanidatesTableViewController: UITableViewController {
             // Need to downcast the person object to Type people from NSManagedObject
             canidateInfoiewController?.person = self.people[selectedRow] as? Person
         }
+        
+        // Set the backbar button
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        self.navigationItem.backBarButtonItem = backItem
         
     }
     

@@ -27,7 +27,7 @@ class CanidateInfoViewController: UIViewController {
         politicalPartyLabel.text = person?.politicalParty
         
         // Set the Navigation Bar Label
-        self.navigationItem.title = "Canidate Detail"
+        self.navigationItem.title = "Candidate Detail"
     }
 
     override func didReceiveMemoryWarning() {

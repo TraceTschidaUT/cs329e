@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // Set the Navigation Title
-        self.navigationItem.title = "Canidate Manager"
+        self.navigationItem.title = "Candidate Manager"
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +45,11 @@ class HomeViewController: UIViewController {
         else {
             
         }
+        
+        // Set the backbar button
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        self.navigationItem.backBarButtonItem = backItem
     }
     
 
