@@ -111,6 +111,17 @@ class WondersPageViewController: UIPageViewController, UIPageViewControllerDeleg
         
         // Return the first image view controller
         self.setViewControllers([self.wondersImageViewControllers[0] as UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+        
+        // Set the navigation title
+        self.title = "Images"
+        
+        // Set colors for the page control.
+        // Set the global page control appearance object.
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.white
+        pageControl.currentPageIndicatorTintColor = UIColor.green
+        pageControl.backgroundColor = UIColor.gray
+        
         }
 
     override func didReceiveMemoryWarning() {
