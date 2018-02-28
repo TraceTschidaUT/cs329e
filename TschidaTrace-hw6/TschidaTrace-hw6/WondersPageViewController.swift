@@ -10,13 +10,16 @@ import UIKit
 
 class WondersPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    // Properties
+    // Controller Properties
+    // The names of the image files
     let wonderImages: [String] = ["wonders1.png", "wonders2.png", "wonders3.png", "wonders4.png", "wonders5.png", "wonders6.png", "wonders7.png"]
     
+    // An array for view controller for the page to access
     var wondersImageViewControllers: [WondersImageViewController] = []
     
-    // Methods
-    func loadWonderImageViewControllers() {
+    // Controller Methods
+    // Loop through each image and create a new view controller
+    fileprivate func loadWonderImageViewControllers() {
         
         for index in 0...6 {
             
@@ -37,10 +40,9 @@ class WondersPageViewController: UIPageViewController, UIPageViewControllerDeleg
             // Add the newly created view controller to the list of view controllerss
             wondersImageViewControllers.append(wondersImageViewController)
         }
-        
     }
     
-    
+    // If the user is swiping back to an previous view controller
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         // Get the index of the current view
@@ -48,6 +50,7 @@ class WondersPageViewController: UIPageViewController, UIPageViewControllerDeleg
             return nil
         }
         
+        // Go to the previous view controller index
         let previousIndex = viewControllerIndex - 1
         
         // If the index is going to negative means they are on the first image about to cycle back
@@ -61,10 +64,12 @@ class WondersPageViewController: UIPageViewController, UIPageViewControllerDeleg
             return nil
         }
         
+        // Return the previous view controller
         return wondersImageViewControllers[previousIndex]
         
     }
     
+    // If the user is swiping forward to the next view controller
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         // Get the view controller from the storyboard
@@ -86,6 +91,7 @@ class WondersPageViewController: UIPageViewController, UIPageViewControllerDeleg
             return nil
         }
         
+        // Return the next view controller
         return wondersImageViewControllers[nextIndex]
     }
     
@@ -94,50 +100,44 @@ class WondersPageViewController: UIPageViewController, UIPageViewControllerDeleg
         return wondersImageViewControllers.count
     }
     
-    // Presentation of the dots
+    // Presentation of the dots order
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         
-        return 0
+        guard let firstViewController = viewControllers?.first as? WondersImageViewController,
+            let firstViewControllerIndex = wondersImageViewControllers.index(of: firstViewController) else {
+                return 0
+        }
+        
+        return firstViewControllerIndex
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set the PageViewController's data source (view controllers) to this viewcontroller
         self.dataSource = self
+        
+        // Set the PageViewController's delegate (controls the presentation of the PageViewController)
         self.delegate = self
         
-        // Load the views
-        loadWonderImageViewControllers()
-        
-        // Return the first image view controller
-        self.setViewControllers([self.wondersImageViewControllers[0] as UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
-        
         // Set the navigation title
-        self.title = "Images"
+        self.title = "Wonders of the World"
         
         // Set colors for the page control.
         // Set the global page control appearance object.
         let pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.white
         pageControl.currentPageIndicatorTintColor = UIColor.green
-        pageControl.backgroundColor = UIColor.gray
+        pageControl.backgroundColor = UIColor.lightGray
         
+        // Create the new views
+        loadWonderImageViewControllers()
+        
+        // Return the first image view controller
+        self.setViewControllers([self.wondersImageViewControllers[0] as UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
         }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
