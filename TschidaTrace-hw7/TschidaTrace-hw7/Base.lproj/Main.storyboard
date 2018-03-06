@@ -20,7 +20,7 @@
                         <subviews>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weL-v8-Leg">
                                 <rect key="frame" x="138" y="292" width="98" height="83"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="2GC-jw-U5P"/>
@@ -29,9 +29,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nUV-s9-vJz" appends="YES" id="DZN-vS-9TU"/>
-                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,6 +38,9 @@
                             <constraint firstItem="weL-v8-Leg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zro-Q4-5iJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1RC-0i-Utq" appends="YES" id="PzA-aL-mfQ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6qf-y0-pGU"/>
                     <connections>
@@ -48,9 +48,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nUV-s9-vJz">
+                <tapGestureRecognizer id="1RC-0i-Utq">
                     <connections>
-                        <action selector="handleTap:" destination="BYZ-38-t0r" id="47c-Mh-3k7"/>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="ENf-iF-2rd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
